@@ -1,0 +1,21 @@
+package LocadoraVeiculos_class;
+
+import java.time.LocalDateTime;
+import LocadoraVeiculos_class.Cliente;
+import LocadoraVeiculos_class.Veiculo;
+import LocadoraVeiculos_class.Locacao;
+
+public class TesteLocacao {
+
+	public static void main(String[] args) {
+		Cliente p1 = new Cliente("Hilton Cardoso Marins Junior", "hiltonmarins@gmail.com");
+		Cliente p2 = new Cliente("Lucas do Carmo Silva","lucassilvabt3@gmail.com");
+		Cliente p3 = new Cliente("Joaozinho das Couves","joaozinho123@gmail.com");
+		Veiculo v1 = new Veiculo("Uno", "Fiat", "PPA6601", 220, true, 0);
+		Veiculo v2 = new Veiculo("Gol", "Volkswagen", "LTD2519", 190, false, 10);
+		Locacao l1= new Locacao(p1, v1, 150,
+				LocalDateTime.of(2020, 5, 21, 14, 0), LocalDateTime.of(2020, 5, 30, 16, 25));
+		System.out.println(l1);
+	}
+
+}
