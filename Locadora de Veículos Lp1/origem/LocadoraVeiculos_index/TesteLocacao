@@ -9,13 +9,24 @@ public class TesteLocacao {
 
 	public static void main(String[] args) {
 		Cliente p1 = new Cliente("Hilton Cardoso Marins Junior", "hiltonmarins@gmail.com");
-		Cliente p2 = new Cliente("Lucas do Carmo Silva","lucassilvabt3@gmail.com");
-		Cliente p3 = new Cliente("Joaozinho das Couves","joaozinho123@gmail.com");
+		Cliente p2 = new Cliente("Lucas do Carmo Silva", "lucassilvabt3@gmail.com");
+		Cliente p3 = new Cliente("Joaozinho das Couves", "joaozinho123@gmail.com");
 		Veiculo v1 = new Veiculo("Uno", "Fiat", "PPA6601", 220, true, 0);
 		Veiculo v2 = new Veiculo("Gol", "Volkswagen", "LTD2519", 190, false, 10);
-		Locacao l1= new Locacao(p1, v1, 150,
-				LocalDateTime.of(2020, 5, 21, 14, 0), LocalDateTime.of(2020, 5, 30, 16, 25));
+		Veiculo v3 = new Veiculo("HB20", "Hyundai", "YCP4615", 350, true, 25.000);
+		Veiculo v4 = new Veiculo("Civic", "Honda", "IWF6488", 425, true, 1.000);
+		Locacao l1 = new Locacao(p1, v1, 150, LocalDateTime.of(2020, 5, 21, 14, 0),
+				LocalDateTime.of(2020, 5, 30, 16, 25));
 		System.out.println(l1);
+		Locacao l2 = new Locacao(p2, v4, 300, LocalDateTime.of(2021, 7, 15, 17, 25), LocalDateTime.of(2021, 7, 30, 15, 12));
+		System.out.println(l2);
+	
+		Locacao l3 = new Locacao(p1, v3, 250, LocalDateTime.of(2022, 4, 10, 9, 5),
+				LocalDateTime.of(2022, 4, 13, 13, 19));
+	System.out.println(l3);
+	Locacao l4 = new Locacao(p3, v2, 525, LocalDateTime.of(2021, 9, 1, 18, 0),
+			LocalDateTime.of(2021, 9, 15, 16, 7));
+	System.out.println(l4);
 	}
 
 }
